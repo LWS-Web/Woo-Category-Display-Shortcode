@@ -4,7 +4,7 @@ Plugin Name: Woo Category Display Shortcode
 Plugin URI: -
 Description: Display WooCommerce categories via shortcode. Several options are included.
 Author: Mo
-Version: 1.0.1
+Version: 1.0.2
 Author URI: -
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -73,13 +73,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		    'orderby'		=> $orderby, 	
 		    'order'			=> $order,		 
 		    'hide_empty'	=> $hide_empty,  
-		 
-		    if ($include != '') {
-		    	'include'		=> $include,
-		    } else {
-		    	'exclude'		=> $exclude,
-		    }
-		    
+		    'include'		=> $include,
+		    'exclude'		=> $exclude,
 		    'exclude_tree'	=> $exclude_tree, 
 		    'number'		=> $number, 	
 		    'slug'			=> $slug,		 

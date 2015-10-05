@@ -91,6 +91,9 @@ You can override the plugins stylesheet if you put an `woo-cat-display.css` file
 
 ## Changelog
 
+### 1.0.2
+* Added new shortcode attribute "include"
+
 ### 1.0.1
 * Added new shortcode attribute "show_count"
 
