@@ -57,6 +57,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	    	'orderby' 		=> 'name', // id / count / name* / slug / term_group / none
 	    	'order' 		=> 'ASC', // ASC* / DESC
 	    	'hide_empty' 	=> 1, // 1* / 0
+	    	'include'		=> '',
 	    	'exclude' 		=> '', // An array of term ids to exclude. Also accepts a string of comma-separated ids
 	    	'exclude_tree'	=> '', // An array of parent term ids to exclude 
 	    	'number' 		=> '', // The maximum number of terms to return. Default is to return them all.
@@ -72,7 +73,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		    'orderby'		=> $orderby, 	
 		    'order'			=> $order,		 
 		    'hide_empty'	=> $hide_empty,  
-		    'exclude'		=> $exclude, 
+		 
+		    if ($include != '') {
+		    	'include'		=> $include,
+		    } else {
+		    	'exclude'		=> $exclude,
+		    }
+		    
 		    'exclude_tree'	=> $exclude_tree, 
 		    'number'		=> $number, 	
 		    'slug'			=> $slug,		 
